@@ -1,0 +1,111 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+header {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #111;
+}
+
+/* Hero section styling */
+.hero {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Overview section styling */
+.overview {
+    padding: 50px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats p:first-child {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.stats p:last-child {
+    font-size: 16px;
+    color: #888;
+}
+
+.chart {
+    /* Add your chart styling here */
+}
+
+/* Logos section styling */
+.logos {
+    text-align: center;
+    padding: 50px;
+}
+
+.logos ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.logos li {
+    margin: 0 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
