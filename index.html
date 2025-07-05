@@ -1,78 +1,240 @@
 <!DOCTYPE html>
-<!-- Created with iSpring --><!-- 1022 644 --><!--version 9.7.9.27013 --><!--type html --><!--mainFolder ./ -->
-<html style=background-color:#ced1d3;>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/><meta name="format-detection" content="telephone=no"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="msapplication-tap-highlight" content="no"/><title>Тест</title><link rel="apple-touch-icon-precomposed" href="data/apple-touch-icon.png"/><link rel="shortcut icon" type="image/ico" href="data/favicon.ico"/><style>body {background-color:#ced1d3;}#spr0_1bddf30 {display:none;}</style>
-    
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GATD - Heating and Air Conditioning</title>
     <style>
-		#playerView {
-			position:absolute;
-			-webkit-tap-highlight-color:rgba(0,0,0,0);
-			-webkit-user-select:none;
-			-moz-user-select:none;
-			-webkit-touch-callout:none;
-			-webkit-user-drag:none;
-		}
-		#playerView * {
-			position:absolute;
-		}
-		#preloader {
-			width: 50px;
-			height: 50px;
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			margin: auto;
-			border-radius: 10px;
-			background-color: rgba(0, 0, 0, 0.5);
-		}
-
-		#preloader::after {
-			content: '';
-			position: absolute;
-			background: url(data:image/png;base64,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UmVhZHlxyWU8AAADcmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMwNjcgNzkuMTU3NzQ3LCAyMDE1LzAzLzMwLTIzOjQwOjQyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJ4bXAuZGlkOmFjOGVjNDFhLTZkYWItODQ0Ni04YzkzLWU1Mjk3N2YwMmE4NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFRThCNzU3NDYzNjcxMUU1QTZDRUE5NTVGOUJGQ0E3MCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFRThCNzU3MzYzNjcxMUU1QTZDRUE5NTVGOUJGQ0E3MCIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNSAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo0OWFlZmI1OC00ZWFmLWQ3NDgtYTI0ZS0zNmNhNGQ2M2QwNTYiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6N0MwQkFBM0M2MjAxMTFFNUI4QjBERTk4MjY5MjQwQjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6MGSVVAAAE3klEQVR42uycW4hWVRiG15Q4eYzGQySSQlriEQ9BF2mE4iSdESRRIb0RD+mNmHgICjqQEGUe6sqgCy1i0iRinAzELrooQhHLGQURUTzMiM7omCLj+/F/czX/t/890z6s9e/3hZcZ1l6z19r7mXXca62arq4uR/mjh/gKCIQiEAKhCIRAKAIhEIpACIQiEIpACIQiEAKhCIRAKAIhEMoX9Yu62NbWxjcUobq6OpaQQpcQz/QwPBOeDU+Fx8Oj4UfhoRrnJnwDvgC3wCfgY/Bf8P0QHrImahmQB1VWLfwGvAieqy+/LxJIR+Dv4QPwf75WWb4CGQavg9fo70mqFd4F79DfCSRCA+HN8Hp4cMppdcBfwB/Bt9mo99Sr8Cl4SwYwnKYhaf2jaXMconoE/hL+CR6TQ/pPato7NS+FbtSfgH+Gp8eMfwv+HT6qpakZvqzVT/d//ePw0/BEeI72ygbFvP/f8MvwpSK2IfLSGuGxFeJ1aby98CG4s5fpDNAqaTlcL89cIf45jddcpDZknI4PKsFo0NKzQLusnX1Iq1P/doHe60CF+GM1b+OK0obIYO5XeGREnLPwfHghfDzBtOVeb+q9z0bEG6njltHVDqQ2RuP9HTwDbkoxH02axv4YjX1tNQP5LKIBl7ZiK/yWToGkLUljsaZpNaTTNc9VCeR1eHUEjHfgD3OoQiXNVRFQVmveqwrIEHh3xPXNOp2Rl77WPFiSvA+tJiCb4FHGNanHP/FggCp52Gdck7y/Wy0Dw2Hatx9s9KZmZNRmxC3JMjh8qsy1Du0St4Y+DomaKFzlEQxRu+apnOQZ1oVeZfWPeMCGlLu2/6dL3BDRwPcPGYiMjocbvaoPnL963+h1DddnChbIMiP8cMIj8KQln34be/lM3gOREW69cW2v81/fGOH1aY7e0wTyrNGYyxT6wQCAHNS8lmvcZ4UIZL4RLt8z7gQA5I7mtZyeCxHIS0b4UReOrLw+EyIQqxScDAiIldcJIQLZYTTmvwUEpMUIHxMikB/gta40PXIF/lwHVrcCAnLVCH8srQR9X7mYt2RUbq1yrOFia390N9SReugaYoR3EEg+GmGEtxNIPhpvhJ8nkHw02Qj/l0Dy0Rwj/DSBZC9ZeD3buPYHgWSv11z5RdrSw/qTQLLX20Z4o0toSxyBxJdsKrVmq79NM2ECKa/3XPltC9fgXwgkW81zpVX35fSVS3HahEB6SqZK9hjXujeJOgLJTrLG19qos1OrLALJSLL+eLFx7SL8cRaZIJCSVrrSfnVL8qHtJoFkoy3ablibQeWz849ZZaZfgUHIfg/Z97EkIs5xLR2OQNLv2u5x0Ttt5UShV1wfj91glRVP01xp8UVTBRiyuOFFheJYQpKVzNrKwQErXPyDA2SF+5k8MhsykCnwPdfzaA3ZYy6nREyCX4Cfd/EPs+nV0RoEUlqWsx1eCie9Bkc2nW5wOa87Dg3Ipy75bWXntSd1yIcHDK1RT3KzTIcOBif6AqOo3d42HX/I0tZW3zIXWgnp68chmfaQjZxyoKac0bXNRxghlpCN2m1dpj/btXEfpD0uqYaua89Luq3dx8TKN3AeE1vt4mLrAohACIQiEAKhCIRAKAIhEIpACq7IqROKJYRA+AoIhCIQAqEIhEAoAiEQikCKrQcCDABHPgH2w7NQdAAAAABJRU5ErkJggg==);
-			background-size: cover;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			animation: preloader_spin 1s infinite linear;
-			-webkit-animation: preloader_spin 1s infinite linear;
-		}
-
-		@keyframes preloader_spin { 0% {transform: rotate(0deg);} 100% {transform: rotate(360deg);} }
-		@-webkit-keyframes preloader_spin { 0% {-webkit-transform: rotate(0deg);} 100% {-webkit-transform: rotate(360deg);}}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: #000;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #000;
+            border-bottom: 1px solid #333;
+        }
+        .header .logo img {
+            height: 40px;
+        }
+        .header .info, .header .contact {
+            font-size: 14px;
+        }
+        .header .info p {
+            margin: 5px 0;
+        }
+        .header .contact a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            font-size: 12px;
+            border-top: 1px solid #333;
+        }
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #fff;
+            color: #000;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .hero .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero .brands {
+            margin-top: 20px;
+        }
+        .hero .brands img {
+            height: 40px;
+            margin: 0 10px;
+        }
+        .services {
+            padding: 50px 20px;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .services .service-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .services .service-item {
+            width: 30%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .services .service-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .services .service-item p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        .services .service-item ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        .services .service-item ul li {
+            margin: 10px 0;
+        }
+        .areas {
+            padding: 50px 20px;
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+        }
+        .areas h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .areas .area-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .areas .area-item {
+            padding: 15px 30px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .services .service-item {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            .header, .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header .info, .header .contact {
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
-	<div id="preloader"></div>
-	<script src="data/browsersupport.js?2DA77380"></script>
-	<script src="data/player.js?2DA77380"></script>
-    <div id="content"></div>
-    <div id="spr0_1bddf30"></div>
-    <script>
-		(function(startup){
-			function start(savedPresentationState)
-			{
-				var presInfo = "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";
-				PresentationPlayer.start(presInfo, "content", "playerView", onPlayerInit, savedPresentationState);
-				function onPlayerInit(player)
-				{
-					(player);
+    <div class="header">
+        <div class="logo">
+            <img src="https://via.placeholder.com/150?text=GATD" alt="GATD Logo">
+        </div>
+        <div class="info">
+            <p>Licence RBQ: 5842-8681-01</p>
+            <p>Professional associations:</p>
+            <img src="https://via.placeholder.com/50?text=CCTAF" alt="CCTAF" style="margin-right: 10px;">
+            <img src="https://via.placeholder.com/50?text=CNESST" alt="CNESST" style="margin-right: 10px;">
+            <img src="https://via.placeholder.com/50?text=CCQ" alt="CCQ">
+        </div>
+        <div class="contact">
+            <p>Contact:</p>
+            <p>514-776-9617</p>
+            <p><a href="mailto:info@gatdinc.ca">info@gatdinc.ca</a></p>
+            <p>Address:</p>
+            <p>909 rue de St-Jovite, Mont-Tremblant, QC J8E 3J8</p>
+            <p>Business hours:</p>
+            <p>Monday to Friday: 9:00 AM - 5:00 PM</p>
+            <p>Saturday: Closed</p>
+            <p>Sunday: Closed</p>
+            <div>
+                <a href="#"><img src="https://via.placeholder.com/20?text=FB" alt="Facebook" style="margin-right: 10px;"></a>
+                <a href="#"><img src="https://via.placeholder.com/20?text=IG" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
 
-					var preloader = document.getElementById("preloader");
-					preloader.parentNode.removeChild(preloader);
-				}
-			}
+    <div class="hero">
+        <h1>Easy heating and air conditioning installation</h1>
+        <p>Fast and professional service in the Laurentians, Lanaudière and Rive-Nord</p>
+        <a href="#" class="btn">Contact us</a>
+        <div class="brands">
+            <img src="https://via.placeholder.com/50?text=STELPRO" alt="STELPRO">
+            <img src="https://via.placeholder.com/50?text=NAPOLEON" alt="NAPOLEON">
+            <img src="https://via.placeholder.com/50?text=Zephyr" alt="Zephyr">
+            <img src="https://via.placeholder.com/50?text=GRCE" alt="GRCE">
+        </div>
+    </div>
 
-			if (startup)
-				startup(start);
-			else
-				start();
-		})();
-    </script>
+    <div class="services">
+        <h2>Serving residential and commercial projects</h2>
+        <div class="service-grid">
+            <div class="service-item">
+                <h3>Installation</h3>
+                <p>We offer professional installation for homes and workplaces. Our team ensures a smooth and innovative solution to delight our customers.</p>
+                <ul>
+                    <li>Qualified technicians</li>
+                    <li>Quick setup</li>
+                    <li>Responsive support</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Repair</h3>
+                <p>Quality service to repair and maintain your heating and air conditioning systems efficiently.</p>
+                <ul>
+                    <li>Quick repairs</li>
+                    <li>Quality control</li>
+                    <li>Competitive rates</li>
+                </ul>
+            </div>
+            <div class="service-item">
+                <h3>Maintenance</h3>
+                <p>Our maintenance services keep your system in top shape with quick fixes and monthly maintenance.</p>
+                <ul>
+                    <li>Free quote</li>
+                    <li>Competitive rates</li>
+                    <li>Expert service</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="areas">
+        <h2>Areas of operating</h2>
+        <div class="area-grid">
+            <div class="area-item">Laurentians</div>
+            <div class="area-item">Lanaudière</div>
+            <div class="area-item">Rive-Nord</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 GATD. All rights reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </div>
 </body>
 </html>
